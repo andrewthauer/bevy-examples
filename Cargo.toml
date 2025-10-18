@@ -3,6 +3,12 @@ name = "bevy-examples"
 version = "0.1.0"
 edition = "2024"
 
+[lints.clippy]
+all = "warn"
+pedantic = "warn"
+# Bevy-specific allowances
+type_complexity = "allow"
+
 [dependencies]
 bevy = { version = "0.17" }
 bevy_example_app = { path = "crates/bevy_example_app" }

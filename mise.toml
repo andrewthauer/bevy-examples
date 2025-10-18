@@ -1,0 +1,11 @@
+[tools]
+rust = "stable"
+
+[tasks.flightcheck]
+description = "Run all essential checks (format, clippy, check, test)"
+run = [
+  "cargo fmt --all -- --check",
+  "cargo clippy --all-targets --all-features -- -D warnings",
+  "cargo check --all-targets --all-features",
+  "cargo test"
+]
