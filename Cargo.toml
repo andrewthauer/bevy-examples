@@ -7,5 +7,13 @@ edition = "2024"
 bevy = { version = "0.17" }
 
 [[example]]
-name = "hello_bevy"
-path = "examples/hello_bevy/main.rs"
+name = "hello_world"
+path = "examples/hello_world/main.rs"
+
+[[example]]
+name = "2d_shapes"
+path = "examples/2d_shapes/main.rs"
+
+[[example]]
+name = "player_move"
+path = "examples/player_move/main.rs"
