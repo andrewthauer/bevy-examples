@@ -5,6 +5,7 @@ edition = "2024"
 
 [dependencies]
 bevy = { version = "0.17" }
+bevy_example_app = { path = "crates/bevy_example_app" }
 
 [[example]]
 name = "hello_world"

@@ -328,6 +328,7 @@ name = "bevy-examples"
 version = "0.1.0"
 dependencies = [
  "bevy",
+ "bevy_example_app",
 ]
 
 [[package]]
@@ -659,6 +660,13 @@ checksum = "7449e5903594a00f007732ba232af0c527ad4e6e3d29bc3e195ec78dbd20c8b2"
 dependencies = [
  "bevy_macro_utils",
  "encase_derive_impl",
+]
+
+[[package]]
+name = "bevy_example_app"
+version = "0.1.0"
+dependencies = [
+ "bevy",
 ]
 
 [[package]]

@@ -1,9 +1,13 @@
 use bevy::prelude::*;
-use bevy::window::PrimaryWindow;
+use bevy_example_app::BevyExampleApp;
 
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
+        .add_plugins(BevyExampleApp {
+            name: "Player Move".into(),
+            ..default()
+        })
         .insert_resource(ClearColor(Color::srgb(0.5, 0.5, 0.9)))
         .add_systems(Startup, setup)
         .add_systems(Update, move_player)
@@ -21,16 +25,6 @@ fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
         Sprite::from_image(asset_server.load("images/kitten.png")),
         Transform::from_xyz(0.0, 0.0, 0.0).with_scale(Vec3::new(0.5, 0.5, 0.0)),
     ));
-}
-
-fn _get_window_dimensions(window_query: Query<&Window, With<PrimaryWindow>>) {
-    if let Ok(window) = window_query.single() {
-        info!(
-            "The windows resolution is {:0.0} by {:0.0}",
-            window.resolution.width(),
-            window.resolution.height()
-        )
-    }
 }
 
 fn move_player(

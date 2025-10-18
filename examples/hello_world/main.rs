@@ -1,8 +1,10 @@
 use bevy::prelude::*;
+use bevy_example_app::BevyExampleApp;
 
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
+        .add_plugins(BevyExampleApp { ..default() })
         .add_plugins(HelloPlugin)
         .run();
 }
